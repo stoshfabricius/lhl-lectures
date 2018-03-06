@@ -4,6 +4,8 @@ module.exports = {
   // connection: {
   //   user: 'stoshfabricius',
   //   password: '',
-  //   database: 'oscars'
+  //   database: 'oscars',
+  //   host: 'localhost',
+  //   port: 5432
   // }
 };
