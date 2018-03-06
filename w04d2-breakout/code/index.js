@@ -7,6 +7,9 @@
 //  Import Knex Configuration
 const config = require('./knexfile.js')
 
+// Make sure to create the database first
+// CREATE DATABASE oscars;
+
 // Create Knex object using configuration
 const knex = require('knex')(config)
 
@@ -28,3 +31,8 @@ const knex = require('knex')(config)
 //
 
 console.log('Raw Query: \n', knex('movies').select().toString())
+
+
+// Create an insert and Delete Query here
+
+knex('movies').insert

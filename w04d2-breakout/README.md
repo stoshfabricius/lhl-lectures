@@ -1,48 +1,36 @@
 # W04D2 (Breakout): Knex
 
 Duration: 1 hour
----
 
 ## Intro
 
-Let's first create the database for this breakout
+Today we will be talking about Query Builders and Knex a popular JS Query Building Library.
 
-```sql
-CREATE DATABASE oscars;
-```
+We will also be talking about other common processes involving databases during development such as
+* Migrations
+* Seeds
 
-## General Notes
+## SQL (Structured Query Language)
 
-## Starting Questions
+How is it pronouced?
 
-How is everything going?
+Either `Sequel` or (es que el). Doesn't really matter. I think the offical way is `Sequel` but both are commonly understood
 
-You guys have been playing with databases for a little over a week now. How are things going?
-
-Why do we need databases?
-
-SQL vs NoSQL (mongo)
-
-What happens if we need to use different dialects of SQL?
-
-## SQL Standardization
-
-We can use SQL (Structured Query Language) in order to access and manipulate the data stored in a database.
+We can use SQL in order to access and manipulate the data stored in a Relational Database Management System (RDBMS).
 
 There is an offical SQL Standard the most recent is SQL:2016 or ISO/IEC 9075:2016. Although with most standards most popular RDBMS don't implement it completey or follow it 100%.
 
 There is also a difference between allowing a user to interact with the data in the system through SQL and the underlying inner workings of the database that also influence developers choice in RDMBS.
 
-This means that the general workings of a RDBMS are similar but the code/queries written for one database is usually not portable to another.
-
+This means that the general workings of a RDBMS are similar but the code/queries written for one database is usually not directly portable to another.
 
 For Example using the the Limit clause in MySQL and Postgres.
 
 ```sql
-/* MySQL
+-- MySQL;
 SELECT * from movies LIMIT 5, 10;
 
-/* POSTGRES
+-- POSTGRES;
 SELECT * FROM movies LIMIT 10 OFFSET 5;
 ```
 
@@ -52,6 +40,7 @@ SELECT * FROM movies LIMIT 10 OFFSET 5;
 * Avoid SQL injection (Escaping input parameters)
 * Incremental Query Building
 * Migrations (not all query builders come with this)
+* Seeds (not all query builders come with this)
 
 ## Intro to Knex
 
@@ -59,8 +48,7 @@ SELECT * FROM movies LIMIT 10 OFFSET 5;
 
 It allows us to create queries for our database using regular JavaScript code, and then translates that to SQL queries.
 
-A Query Builder is only a piece of a complete ORM. For example a popular ORM for JavaScript is Bookshelf. Bookshelf uses Knex as the Query builder and adds the Object mapping to create a full ORM.
-
+A Query Builder is only a piece of a complete ORM. For example a popular ORM for JavaScript is [Bookshelf](http://bookshelfjs.org/). Bookshelf uses Knex as the Query builder and adds the Object mapping in order to create a full ORM.
 
 Here is an example of using knex to query a movies table
 ```javascript
@@ -74,7 +62,7 @@ knex('movies').select().asCallback(function(err, rows) {
 })
 ```
 
-## Translation from Knew to RAW SQL
+### Translation from Knex to RAW SQL
 
 From the above query we can get a pretty good idea about what the SQL would be.
 But Knex also contains a method to show us the exact SQL that it would generate
@@ -82,7 +70,6 @@ But Knex also contains a method to show us the exact SQL that it would generate
 ```javascript
 knex('movies').select().toString()
 ```
-
 
 ## Query Chaining
 What did you notice above?
@@ -108,7 +95,21 @@ query.then(function(rows) {
 
 We are able to connect to other Database Servers running on remote machines.
 
+Therefore we need to tell knex what time of database we are connecting to so it can use the correct adapter, where the database is located and who we want to connect to the database as.
+
+We can pass this information seperatly in an object or some databases support a string connection string that contains the same data
+
+Knex allows us to keep this information in a special file called a `knexfile.js` located at the root of out project
+
 ## Migrations
+
+[Migrations](https://en.wikipedia.org/wiki/Schema_migration) are a way for us to keep track of changes to the database schema (the "shape" of the database) over time, in sync with our changes to our applications code.
+
+Once you've committed and pushed a migration, you should not change it! You need to create a new one.
+
+Knex has a CLI program that helps you create migrations and run them forwards and backwards.
+
+We can create the movies table in our database with our first migration
 
 ```bash
 knex migrate:make create_movies
@@ -117,32 +118,43 @@ knex migrate:make create_movies
 You'll notice this will create a migrations folder in your root directory if you don't have one already
 It will also create a new migration file with the name we passed into the command
 
-```bash
-knex migrate:make create_award_winners
-```
-
 Now we can run the migration
-```
+```bash
 knex migrate:latest
 ```
 
+If we want to reverse the effects of a migration we can run
+Now we can run the migration
+```bash
+knex migrate:rollback
+```
+
+Migrations are important when working in a team setting as they capture the changes to your database over time
+
+
 ## Seeds
+
 ```bash
 knex seed:make movie_seed
 ```
 You'll notice this will create a seeds folder in your root directory if you don't have one already
 
 We can then run the seeds with
+```bash
+knex seed:run
+```
 
+This will run all the files in your `seeds/` folder in alphabetical order
 
-Teacher Notes
+## Going Forward
 
-Strongly suggest demoing pre-existing code b/c #3 is a big topic that you should spend a good chunk of time talking about and demoing.
+Most Modern Web App Frameworks now either contain an ORM / Query Builder or a popular libaray has emerged.
+|Language|Web Framework | ORM |
+|--------|--------------|-----|
+| Node   | Express      | Sequelize |
+| Ruby   | Rails        | Active Record |
+| Python | Django       | Django ORM |
+| Java   | Spring       | Hibernate |
+| Elixir | Phoenix      | Ecto  |
 
-You can/should mention that the mid-term project will require them to use Knex instead of the raw SQL (pg driver) approach they saw in the lecture. It was important to practice with the pg driver directly in order to appreciate how queries are transmitted as strings.
-
-We have not formally covered and they therefore likely don't know about the Promise pattern yet, but Knex offers this pattern as an option. Let the students know to use the callback pattern instead, so that they become more and more comfortable in working with callbacks, closures and nested scope issues.
-
-UPDATE: The migrations piece seems to require using promises instead of callbacks. The migration activity has been updated to sidestep this by suggesting that they use it for now without fully understanding what that means and that we will cover it soon.
-
-
+In your midterm project you will be using Knex as opposed to raw SQL. It was important to start with raw SQL and the pg driver to understand how things are working at a lower level, but day to day you'll probably end up using a library as opposed to raw SQL.
