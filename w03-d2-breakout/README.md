@@ -6,7 +6,7 @@ Duration: 1 hour
 
 Today we will look at jQuery, it's history, why it exists and how to use it.
 
-Before we talk about what jQuery is, we need to pretend we are back in early 2006 and looking to create a website, [Space Jam](https://www.warnerbros.com/archive/spacejam/movie/jam.htm)
+Before we talk about what jQuery is, we need to pretend we are back in early 2006 and looking to create a website
 
 We need to create this website to work on all browsers and it has some interactive components that will require the use of client side code (JavaScript) to provide that functionality
 
@@ -44,7 +44,7 @@ request.onload = function() {
 
   }
 };
-```
+
 request.onerror = function() {
   // There was a connection error of some sort
 };

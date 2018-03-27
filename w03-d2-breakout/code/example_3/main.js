@@ -1,7 +1,3 @@
-console.log("Exmaple 3")
-/ TODO:
-// - Append the pets to the section
-// 
 
 var pets = [
   {
@@ -25,3 +21,19 @@ var pets = [
     age: 2
   }
 ]
+
+$('.show-pets-btn').on('click', function(event) {
+  // Append a list of pets to the pets container 
+  console.log('Show all the pets')
+  var $petsContainer = $('#pets-container')
+
+  // Pets was available globally
+  pets.forEach(function(item) {
+    // Create a new p tag
+    var newPetElement = `<p>${item.name}</p>`
+
+    // Apend this to the page
+    $petsContainer.append(newPetElement)
+  })
+})
+
