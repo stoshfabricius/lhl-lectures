@@ -24,9 +24,9 @@ knex('movies').select().asCallback(function(err, rows) {
 })
 
 // Same as above but using Promises
-knex('movies').select()
-  .then(rows => console.log(rows))
-  .catch(err => console.log(err.message))
+// knex('movies').select()
+//   .then(rows => console.log(rows))
+//   .catch(err => console.log(err.message))
 
 
-console.log('Raw Query: \n', knex('movies').select().toString())
+// console.log('Raw Query: \n', knex('movies').select().toString())

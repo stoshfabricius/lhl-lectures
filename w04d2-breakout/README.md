@@ -82,7 +82,8 @@ We can build query's up and chain them together depending on logic in our progra
 var query = knex.select(["name", "email"]).from("users");
 
 var email = process.argv[2];
-/ if email was specified, then filter
+
+// if email was specified, then filter
 if(email) {
   query = query.where({"email": email});
 }
@@ -149,12 +150,13 @@ This will run all the files in your `seeds/` folder in alphabetical order
 ## Going Forward
 
 Most Modern Web App Frameworks now either contain an ORM / Query Builder or a popular libaray has emerged.
-|Language|Web Framework | ORM |
-|--------|--------------|-----|
-| Node   | Express      | Sequelize |
-| Ruby   | Rails        | Active Record |
-| Python | Django       | Django ORM |
-| Java   | Spring       | Hibernate |
-| Elixir | Phoenix      | Ecto  |
+
+| Language| Web Framework | ORM |
+|---------|---------------|-----|
+| Node    | Express       | Sequelize |
+| Ruby    | Rails         | Active Record |
+| Python  | Django        | Django ORM |
+| Java    | Spring        | Hibernate |
+| Elixir  | Phoenix       | Ecto  |
 
 In your midterm project you will be using Knex as opposed to raw SQL. It was important to start with raw SQL and the pg driver to understand how things are working at a lower level, but day to day you'll probably end up using a library as opposed to raw SQL.
