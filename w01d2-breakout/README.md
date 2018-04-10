@@ -66,7 +66,7 @@ Everytime we see a new block of code, denoted with the {}, it creates a new scop
 This is true for languages such as C and Java
 
 Here is some example C code
-```
+```c
 #include <stdio.h>
 
 int main(void)
