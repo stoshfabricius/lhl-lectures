@@ -7,21 +7,20 @@
 var name = "Ronald McDonald";
 
 function sayName(thing, isDr) {
-
+  
   function doctor() {
-    return "Dr. " + name;
+    return "Dr. " + thing;
   }
 
   if (isDr) {
     console.log(doctor());
   } else {
-    console.log(name);
+    console.log(thing);
   }
-
 }
 
 sayName("John Doe", false);
 sayName("Phil", true);
 sayName(name, true);
-sayName(name, []);
-doctor(); //won't work
+sayName(name, {});
+
