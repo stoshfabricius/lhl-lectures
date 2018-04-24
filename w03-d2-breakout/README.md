@@ -89,7 +89,7 @@ Lets take a peak in DevTools and see it work
 
 ## jQuery vs jQueryUI
 
-jQuery is a library tat enables us to interact with the DOM and access Browser API's.
+jQuery is a library that enables us to interact with the DOM and access Browser API's.
 
 We can use jQuery to build larger items in our Application (Components) for Example
   * Dropdowns
