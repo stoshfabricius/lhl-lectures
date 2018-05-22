@@ -1,17 +1,21 @@
-.pet {
-  padding: 10px;
-  background-color: white;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid black;
+
+h3 {
+  text-align: center;
 }
 
-/* .demo-hover {
-  width: 330px;
-  height: 80px;
-  background-color: blueviolet
+div#todos {
+  text-align: center;
 }
 
-.demo-hover:hover {
-  background-color: red
-} */
+ul {
+  cursor: pointer;
+}
+
+li.task {
+  color: green;
+}
+
+li.task.done {
+  text-decoration: line-through;
+  color: grey;
+}

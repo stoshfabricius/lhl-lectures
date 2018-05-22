@@ -1,0 +1,17 @@
+.pet {
+  padding: 10px;
+  background-color: white;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+/* .demo-hover {
+  width: 330px;
+  height: 80px;
+  background-color: blueviolet
+}
+
+.demo-hover:hover {
+  background-color: red
+} */

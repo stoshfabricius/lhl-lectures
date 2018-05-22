@@ -1,48 +1,11 @@
+// Event Delegation
 
+//     Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 
+// The click event is the single event listener attached to the parent element of all of the <li> tags. If I click on an <li> tag that is a descendant of the <ul> then it will call this function. This means I can add more <li> tags without needing to concern myself with adding done functionality to each one.
 
-
-function fetchPets() {
-  var pets = [
-    {
-      name: 'Dingo',
-      type: 'dog',
-      age: 1
-    },
-    {
-      name: 'Kongo',
-      type: 'snake',
-      age: 3
-    },
-    {
-      name: 'Meowngo',
-      type: 'cat',
-      age: 2
-    },
-    {
-      name: 'Bongo',
-      type: 'dog',
-      age: 2
-    }
-  ]
-  return pets
-}
-
-$('.show-pets-btn').on('click', function(event) {
-  // Append a list of pets to the pets container
-  console.log('Show all the pets')
-  var $petsContainer = $('#pets-container')
-
-  // Tomorrow we wil use AJAX to fetch them
-  var pets = fetchPets()
-  
-  // Pets was available globally
-  pets.forEach(function(item) {
-    // Create a new p tag
-    var newPetElement = `<p>${item.name}</p>`
-
-    // Apend this to the page
-    $petsContainer.append(newPetElement)
-  })
+$('ul').on('click', 'li.task', function(event) {
+  var li = $(event.target)
+  li.toggleClass('done')
 })
 
