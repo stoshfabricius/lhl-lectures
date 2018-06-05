@@ -6,10 +6,10 @@ function parent() {
         var x = 8;
 
         if (true) {
-            
+
         }
     }
-    
+
     child()
     console.log(x)
 }

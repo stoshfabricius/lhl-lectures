@@ -7,7 +7,7 @@
 var name = "Ronald McDonald";
 
 function sayName(thing, isDr) {
-  
+
   function doctor() {
     return "Dr. " + thing;
   }

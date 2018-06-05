@@ -4,6 +4,17 @@ Duration: 1 hour
 
 ## Intro
 
+You guys have started to write some small programs in JavaScript and now you are ready to learn about some new important concepts
+* Functions as values
+* Reading Code
+* Scope, in general and in JavaScript
+
+## Functions as Values
+
+In JavaScript functions are first class objects (also sometimes referred to as first class citizens).
+That means that they can be saved to variables and passed around like other primitive data types (ex. number, string).
+We'll go over how and why this is important in code examples
+
 ## Reading Code
 
 Reading code is a very important skill. It requires a different skills compared to writting code, but is equally important.
@@ -20,12 +31,13 @@ Code is read 10x more often then it is written!
 
   When reading code it's not as simple as reading from the top of a file to the bottom
 
+  Code flow can be a little convoluted. Control flow mechanisms like `if-else`, and `for` change the control flow, skipping over some code and repeating other code.
+
   There could be a function call in on file, using a function defined in another file
 
   We could import some code from another file into the current file.
 
-  We could be dealing with an asyncronous language like JavaScript which means that just one line on code is below another in a file
-  doesn't mean that they will be executed in that order.
+  We could be dealing with an asyncronous language like JavaScript which means that just one line on code is below another in a file doesn't mean that they will be executed in that order.
 
 ### Reading Code like a Computer
 
@@ -38,9 +50,10 @@ Code is read 10x more often then it is written!
   For JavaScript
 
   The computer takes a quick run over the file to see what exists
-    For example it remebers things like function names
+    * Functions declared using function declaration
+    * Variables defined with var are hoisted in their current scope (more on this to come)
 
-  It will then start at the top of the program and work it's way down a file
+  It will then start at the top of the program and work it's way down a file following the flow of the code not line by line!.
 
   Just beacuse you can write does not mean that you can read it, IT TAKES PRACTICE!
 
@@ -49,7 +62,7 @@ Code is read 10x more often then it is written!
 
 ### What is Scope?
 
-NOTES: Check to see how many people have experience with other languages and remind them that scope differs frmo other languages
+Anyone who has previous programming experience, scope in JavaScript may differe from what you understand scope to be as scope differs from language to language
 
 Scope controls the visability and lifetimes of variables and parameters.
 Put more simply **Scope** is the area where a variable is available
@@ -71,18 +84,18 @@ Here is some example C code
 
 int main(void)
 {
-  /* This is the highest scope inside main 
+  /* This is the highest scope inside main */
   int x = 0;
   {
-    /* This is a new scope
+    /* This is a new scope */
     int x = 1;
     printf("This is value of x: %i within the block\n", x);
   }
   printf("This is value of x: %i after the new block is done\n", x);
 }
 
-/* This is value of x: 1 within the block
-/* This is value of x: 0 after the new block is done
+/* This is value of x: 1 within the block */
+/* This is value of x: 0 after the new block is done */
 ```
 
 JavaScript can be block scoped when declaring variables using `let` and `const` which you will see in the coming weeks.
