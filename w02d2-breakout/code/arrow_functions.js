@@ -39,24 +39,8 @@ var double2 = (x) => x * 2;
 var test = {
   prop: 42,
   func: function() {
-
-      var that = this
-      function crazyStuff() {
-          console.log('Innner Fun', that.prop)
-      }
-      crazyStuff()
-
     return this.prop;
   },
 };
 
 console.log(test.func());
-
-var testArrow = {
-  prop: 42,
-  func: () => {
-    return this.prop;
-  },
-};
-
-console.log(testArrow.func());

@@ -11,6 +11,11 @@
 //   console.log('Is I still defined out here?', i)
 // }
 
+
+
+
+
+
 // rewritten, but the exact same:
 // function outerHoisted () {
 //   var i; // <-- might as well declare it here, because it's hoisted
@@ -41,11 +46,12 @@ function outerShadowing () {
     // We still get somewhat hosited behaviour
 
     let value = 'inner var';
+    console.log(value)
   }
 
-  // console.log(value)
+  console.log(value)
 }
-// outerShadowing();
+outerShadowing();
 
 // You can now even have blocks without for, if, etc...
 {
@@ -61,18 +67,20 @@ function outerShadowing () {
 // const defines constants. Kind of?
 // Precisely speaking, it declares a variable and its initial value,
 // and a variable declared with `const` cannot be re-assigned to a different value.
-const konstant = { quality: "unchanging!" };
-// const konstant = 6
-// console.log(konstant);
+const konstant = "hello"
+
+// const konstant = { quality: "unchanging!" };
 
 // try to re-assign it:
 // konstant = "something else"; // <-- throws TypeError: Assignment to constant variable.
 
+
+
+
+
 // In the case of objects, it becomes important to say that *only the variable is
 // constant*, but the object it points to can be modified.
-konstant.quality = "changing!"
-// konstant++
-console.log(konstant);
+// konstant.quality = "changing!"
 
 // This does not violate const-ness. It's all assignment directly to the const variable.
 // Object properties (keys) cannot be const, as they are not variables.
