@@ -10,7 +10,7 @@ Before we talk about what jQuery is, we need to pretend we are back in early 200
 
 We need to create this website to work on all browsers and it has some interactive components that will require the use of client side code (JavaScript) to provide that functionality
 
-John Resig released jQuery on August 26th, 2006 and changed the front-end development landscape forever.
+jQuery was released on August 26th, 2006 and changed the front-end development landscape forever.
 
 ## Why does jQuery Exist
 

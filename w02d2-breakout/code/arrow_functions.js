@@ -4,7 +4,7 @@
 // Look at different examples: http://es6-features.org/#ExpressionBodies
 
 // regular function expression:
-var add = function add (x, y) {
+var add = function(x, y) {
   return x + y;
 };
 
@@ -21,11 +21,12 @@ var add3 = (x, y) => {
   return result;
 }
 
+
 // Or arrow functions with simple bodies of only one expression, omitting the `return` keyword:
 var add4 = (x, y) => x + y;
 
 // parentheses are optional if there's only one argument:
-var double  =  x  => x * 2;
+var double  = x => x * 2;
 var double2 = (x) => x * 2;
 
 // Generally:
@@ -38,9 +39,9 @@ var double2 = (x) => x * 2;
 // Function Deleration
 var test = {
   prop: 42,
-  func: function() {
-    return this.prop;
-  },
+  func: function() { 
+    
+  }
 };
 
 console.log(test.func());

@@ -16,6 +16,6 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('movies')
-    .then(data => knex.schema.dropTable('actors'))
+  return knex.schema.dropTable('actors')
+    .then(data => knex.schema.dropTable('movies'))
 };

@@ -32,8 +32,8 @@ exports.seed = function(knex, Promise) {
     ]);
   }
 
-  return deleteMovies()
-    .then(deleteActors)
+  return deleteActors()
+    .then(deleteMovies)
     .then(insertMovies)
     .then(movies => insertActors(movies))
 
