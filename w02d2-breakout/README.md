@@ -33,9 +33,9 @@ Here is a link showing what features of ES6 are implemented in which browser htt
 
 ## New Versions of ECMAScript
 
-* The Seventh Edition, ES7, offically known as ECMAScript 2016 was finalized in June 2017. It was a much smaller update then ES6.
+* The Seventh Edition, ES7, offically known as ECMAScript 2016 was finalized in June 2016. It was a much smaller update then ES6.
 
-* The 8th edition, officially known as ECMAScript 2017, was finalized in June 2017, A new major feature in this edition is `async/await` which you guys will see in an advanced lecture in weeks 9/10.
+* The Eighth edition, ES8, officially known as ECMAScript 2017, was finalized in June 2017, A new major feature in this edition is `async/await` which you guys will see in an advanced lecture in weeks 9/10.
 
 * You may also see the term `ES.Next` this is used to refer to whatever the next version is at time of writing. This mostly contains proposals of new features to be included in future ECMAScript specs.
 
@@ -97,7 +97,7 @@ let i = 0;
 }
 ```
 
-We can use `const` to specify that we want to prevent re-assignment of a variable. We can still modify the values inside an object or array, we simply cannot assign to the variable a different value.
+We can use `const` to specify that we want to prevent re-assignment of a variable. We can still modify the values inside an object or array, we simply cannot assign to the variable a different value. Variables declared with `const` are block scoped.
 
 ```javascript
 const obj = {
