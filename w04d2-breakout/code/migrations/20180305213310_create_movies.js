@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary()
     table.string('name')
     table.string('year')
-    table.boolean('winner').default(false)
   }).then(data => {
     return knex.schema.createTable('actors', table => {
       table.increments('id').primary()
