@@ -13,9 +13,6 @@ function addBy(x) {
   return newFunc
 }
 
-var add2 = addBy(2)(3);
-// var add3 = addBy(3);
-// var add4 = addBy(4);
+var add2 = addBy(2);
 
-// console.log(add2(3));
-console.log(add2);
+console.log(add2(3));

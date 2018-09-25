@@ -45,7 +45,7 @@ Code is read 10x more often then it is written!
 
   How do computers read code.
 
-  It all depends on the language, since each language has it's own interpreter with it's own compiler / interpreter
+  It all depends on the language, and the corresponding compiler / interpreter.
 
   For JavaScript
 
