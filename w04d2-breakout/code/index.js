@@ -30,12 +30,12 @@ const knex = require('knex')(config)
 //   .catch(err => console.log(err.message))
 
 // Insert values into the database
-knex('movies').insert({title: 'Shawshank Redemption', year: '2014'}).returning('*')
+// knex('movies').insert({title: 'Shawshank Redemption', year: '2014'}).returning('*')
 
 // We can use all standard SQL keywords such as joins and limit
-knex('movies')
-  .join('actors', 'actors.movie_id', '=', 'movies.id')
-  .select('actors.name as star', 'movies.name as movie', 'movies.year as year')
-  .limit(10)
-  .then(rows => console.log(rows))
-  .catch(err => console.log(err.message))
+// knex('movies')
+//   .join('actors', 'actors.movie_id', '=', 'movies.id')
+//   .select('actors.name as star', 'movies.name as movie', 'movies.year as year')
+//   .limit(10)
+//   .then(rows => console.log(rows))
+//   .catch(err => console.log(err.message))
