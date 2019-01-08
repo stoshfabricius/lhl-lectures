@@ -21,11 +21,13 @@ console.log('It is: ', add(x,y))
 
 // Control flow of the program using loops
 
-// console.log('Look how many times I can loop', i)
-// for (var i = 0; i < 10, i++) {
-//   console.log('Loop', i)
-// }
+console.log('Starting to loop')
 
+for (var i = 0; i < 10, i++) {
+  console.log('Loop', i)
+}
+
+console.log('i - After the Loops', i)
 
 function add(x,y) {
   return x + y;

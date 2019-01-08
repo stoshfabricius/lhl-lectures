@@ -24,7 +24,7 @@ Code is read 10x more often then it is written!
   * Evaluating code
     - 3rd Party Libraries
     - Security Reviews
-  * Looking for Bugs
+  * Fixing Bugs
   * Learning new things
 
 ### How does one read code?
@@ -88,7 +88,10 @@ int main(void)
   int x = 0;
   {
     /* This is a new scope */
+
+    /* This variable x shadows the outer x variable */
     int x = 1;
+
     printf("This is value of x: %i within the block\n", x);
   }
   printf("This is value of x: %i after the new block is done\n", x);
