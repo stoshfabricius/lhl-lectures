@@ -1,0 +1,19 @@
+{
+  "name": "w01d2-breakout",
+  "version": "1.0.0",
+  "description": "Lighthouse Labs - W01D02-Breakout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoshfabricius/lhl-lectures.git"
+  },
+  "author": "Stosh Fabricius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stoshfabricius/lhl-lectures/issues"
+  },
+  "homepage": "https://github.com/stoshfabricius/lhl-lectures#readme"
+}

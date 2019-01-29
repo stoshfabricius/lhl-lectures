@@ -2,6 +2,15 @@
 
 Duration: 1 hour
 
+## Learning Outcomes
+
+1. Reading Code
+  * In this breakout we'll practice reading and evaluating pre-written code in our head. Developers don't read code top to bottom, and instead in some ways try to mimic the computer.
+
+2. Scopes
+  * Scopes and how they work through Functions.
+  * "The scope chain" and being able to identify different levels of scopes in JavaScript.
+
 ## Intro
 
 You guys have started to write some small programs in JavaScript and now you are ready to learn about some new important concepts

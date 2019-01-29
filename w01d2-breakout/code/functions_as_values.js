@@ -5,7 +5,7 @@
 var add = function(a,b) {
   return a + b
 }
-console.log('Adding 1 + 2', add(1,2))
+console.log('Adding 5 + 6', add(5,6))
 
 
 // Function declared using function definition (also called function declaration, or function statement )
