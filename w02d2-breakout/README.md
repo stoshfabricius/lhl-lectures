@@ -2,6 +2,18 @@
 
 Duration: 1 hour
 
+## Learning Outcomes
+
+1. ES6 features
+    * "use strict";
+    * for...of
+    * let and const vs var
+    * String Interpolation
+    * Arrow functions
+    * Demo difference with this when using these and explain the benefits / use case where it is advantageous
+    * Mention "lots more changes, but not important right now"
+    * http://es6-features.org/
+
 ## Intro
 
 Brendan Eich wrote JavaScript in 10 days, in May 1995. This was a result of the necessity of an interpreted language for the ever growing web. Netscape Navigator shipped with the first implementation of LiveScript in September which was later remnamed to JavaScript for the December release.

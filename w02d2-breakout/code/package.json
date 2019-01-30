@@ -1,0 +1,19 @@
+{
+  "name": "w02d2-breakout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoshfabricius/lhl-lecture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stoshfabricius/lhl-lecture/issues"
+  },
+  "homepage": "https://github.com/stoshfabricius/lhl-lecture#readme"
+}
