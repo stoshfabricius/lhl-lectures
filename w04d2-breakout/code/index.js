@@ -7,10 +7,6 @@
 //  Import Knex Configuration
 const config = require('./knexfile.js')
 
-// Make sure to create the database first
-// CREATE DATABASE oscars;
-// createdb oscars;
-
 // Create Knex object using configuration
 const knex = require('knex')(config)
 
@@ -30,12 +26,15 @@ const knex = require('knex')(config)
 //   .catch(err => console.log(err.message))
 
 // Insert values into the database
-// knex('movies').insert({title: 'Shawshank Redemption', year: '2014'}).returning('*')
+knex('movies')
+  .insert({name: 'Gladiator', year: '2000'})
+  .returning('*')
+  .then(rows => console.log(rows))
 
 // We can use all standard SQL keywords such as joins and limit
-// knex('movies')
+// console.log(knex('movies')
 //   .join('actors', 'actors.movie_id', '=', 'movies.id')
 //   .select('actors.name as star', 'movies.name as movie', 'movies.year as year')
-//   .limit(10)
+//   .limit(10).toString())
 //   .then(rows => console.log(rows))
 //   .catch(err => console.log(err.message))

@@ -2,9 +2,16 @@
 
 Duration: 1 hour
 
+## Learning Outcomes
+
+1. Benefits of query builders compared to raw SQL
+2. Introduction to Knex
+3. Migrations: why they exist and their benefits
+
 ## Intro
 
-Today we will be talking about Query Builders and Knex a popular JS Query Building Library.
+Today we will be talking about Query Builders and [Knex](https://knexjs.org/) a popular JS Query Building Library.
+  - How to pronounce [Knex](https://github.com/tgriesser/knex/issues/1879)
 
 We will also be talking about other common processes involving databases during development such as
 * Migrations
