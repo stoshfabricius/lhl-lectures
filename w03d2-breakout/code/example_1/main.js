@@ -1,14 +1,16 @@
 // TODOs:
+// - demo alert to crazy prize window
 // - demo evt
 // - demo this
-// - demo alert to crazy prize window
 
 $('.prize-btn').on('click', function(evt) {
-  // this
-  console.log(this)
-  console.log($(this))
-  // console.log(evt.offsetX, evt.offsetY);
   // alert('You Win the Prize!!!!')
+  // console.log(evt.offsetX, evt.offsetY);
+
+  // What is 'this'?
+
+  // console.log(this)
+  // console.log($(this))
 });
 
 

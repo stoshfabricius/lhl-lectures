@@ -1,7 +1,4 @@
 
-
-
-
 function fetchPets() {
   var pets = [
     {
