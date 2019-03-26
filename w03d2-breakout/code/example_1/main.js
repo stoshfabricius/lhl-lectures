@@ -3,14 +3,15 @@
 // - demo evt
 // - demo this
 
-$('.prize-btn').on('click', function(evt) {
-  // alert('You Win the Prize!!!!')
-  // console.log(evt.offsetX, evt.offsetY);
+  $('.prize-btn').on('click', function(evt) {
+    // alert('You Win the Prize!!!!')
+    // console.log(evt.offsetX, evt.offsetY);
+    // console.log(evt);
 
-  // What is 'this'?
+    // What is 'this'?
 
-  // console.log(this)
-  // console.log($(this))
-});
+    console.log(this)
+    console.log($(this))
+  });
 
 
