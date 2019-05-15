@@ -32,14 +32,14 @@ $('.show-pets-btn').on('click', function(event) {
 
   // Tomorrow we wil use AJAX to fetch them
   var pets = fetchPets()
-  
+
   // Pets was available globally
   pets.forEach(function(item) {
     // Create a new p tag
-    var newPetElement = `<p>${item.name}</p>`
+    var newPetName = $('<p>' + item.name + '</p>')
 
     // Apend this to the page
-    $petsContainer.append(newPetElement)
+    $petsContainer.append(newPetName)
   })
 })
 
